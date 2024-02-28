@@ -10,8 +10,12 @@ function DebitForm() {
   const { register, handleSubmit, control } = useForm();
   const [users, setUsers] = useState([]);
   const navigate = useNavigate();
+  const [maxDate, setMaxDate] = useState("");
+
   useEffect(function () {
     const getUsers = async () => {
+      const today = new Date().toISOString().split("T")[0];
+      setMaxDate(today);
       const payload = await axios.Get("/user/all");
       if (payload.status === "success") {
         setUsers(payload.data);
@@ -40,7 +44,7 @@ function DebitForm() {
 
   return (
     <form className="fof" onSubmit={handleSubmit(onSubmit)}>
-      <h1 style={{color:"black"}}>Депозит</h1>
+      <h1 style={{ color: "black" }}>Депозит</h1>
       <label>
         Select User:
         <Controller
@@ -61,7 +65,12 @@ function DebitForm() {
           )}
         />
       </label>
-      <input type="date" {...register("startDate")} placeholder="Start Date" />
+      <input
+        type="date"
+        {...register("startDate")}
+        placeholder="Start Date"
+        max={maxDate}
+      />
       <input type="text" {...register("type")} placeholder="Type" />
       <input type="text" {...register("value")} placeholder="Value" />
       <input type="text" {...register("amount")} placeholder="Amount" />
