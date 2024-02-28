@@ -17,7 +17,8 @@ func init() {
 	host := "localhost"
 	port := "5432"
 	user := "postgres"
-	password := "Fird@vs2002"
+	// password := "Fird@vs2002"
+	password := "niyozbek"
 	dbname := "bank_db"
 
 	// getting db for gorm

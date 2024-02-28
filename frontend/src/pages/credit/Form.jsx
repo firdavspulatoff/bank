@@ -11,12 +11,15 @@ function CreditForm() {
   const [showPercent, setShowPercent] = useState(false);
   const [type, setType] = useState("");
   const [amount, setAmount] = useState("");
+  const [maxDate, setMaxDate] = useState("");
 
   const [month, setMonth] = useState([]);
   const navigate = useNavigate();
   const [totalAmount, setTotalAmount] = useState();
   useEffect(function () {
     const getUsers = async () => {
+      const today = new Date().toISOString().split("T")[0];
+      setMaxDate(today);
       const payload = await axios.Get("/user/all");
       if (payload.status === "success") {
         setUsers(payload.data);
@@ -73,6 +76,7 @@ function CreditForm() {
           type="date"
           {...register("startDate")}
           placeholder="Start Date"
+          max={maxDate}
         />
         <br />
         {/* <input type="text" {...register("type")} placeholder="Type" /> */}
