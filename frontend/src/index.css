@@ -1,0 +1,132 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  background-color: #423737 ;
+  margin: 0;
+  display: flex;
+  /* place-items: center; */
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+} */
+
+button {
+  padding: 1px 15px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #b21d1d;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+.navbar{
+  display: flex;
+  justify-content: center;
+
+}
+.navbar p{
+  margin-right: 145px;
+}
+.app{
+  padding: 25px;
+}
+
+tr:hover{
+  background-color: rgb(56, 53, 26);
+transition: all  0.3s ;
+
+}
+
+th{
+  font-size: 25px;
+  color: #571515;
+  margin-right: 145px;
+}
+td{
+  font-size: 18px;
+  color: rgb(145, 154, 48);
+  margin-right: 165px;
+}
+.add{
+  width: 150px;
+  padding: 5px 15px;
+background-color: #571515;
+cursor: pointer;
+transition: all  0.5s ;
+}
+.add:hover{
+  background-color: sandybrown;
+}
+table{
+  margin-top: 10px;
+  margin-right: 15px;
+}
+.inpf{
+  width: 350px;
+  padding: 5px 25px;
+  background-color: #571515;
+}
+
+form{
+  width: 800px;
+  background-color: #571515;
+}
+.fof{
+  padding: 10px 25px  ;
+  background-color: #4b4b69;
+  width: 500px;
+  color: brown;
+}
+.suser{
+  margin-bottom: 10px;
+  width: 150px;
+  color: #2d2626;
+}
